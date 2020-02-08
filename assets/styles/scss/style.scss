@@ -16,8 +16,8 @@ CSS file.
 
 // Import Motion-UI from vendor files
 @import "../../../node_modules/motion-ui/src/motion-ui";
-@include motion-ui-transitions;
-@include motion-ui-animations;
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
 
 // Select the components you want to use
 @include foundation-global-styles;
@@ -66,3 +66,5 @@ CSS file.
 
 // Import your custom styles
 @import "global";
+@import "header";
+@import "home";

@@ -5,6 +5,35 @@ Stylesheet: Global Stylesheet
 *************************************************/
 
 /*********************
+GLOBAL STYLES
+*********************/
+.content-wrap {
+	max-width: 836px;
+}
+
+.lt-gray-bg {
+	background-color: $light-gray;
+}
+
+.heading-underline {
+	width: 57px;
+	height: 4px;
+	background: $red;
+	margin: .7em auto 2.2em;
+	
+	@include breakpoint (medium) {
+		height: 6px;
+	}
+	
+}
+
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
+}
+
+/*********************
 POSTS & CONTENT STYLES
 *********************/
 .page-title {
@@ -413,7 +442,78 @@ FOOTER STYLES
 *********************/
 .footer {
 	clear: both;
-	margin-top: 1em;
+	padding-top: 1em;
+	
+	.inner-footer {
+		
+		.content-wrap {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		.top {
+			border-top: 1px solid $medium-gray;
+			border-bottom: 1px solid $medium-gray;
+			padding-top: 2.55em;
+			padding-bottom: 5.9em;
+			
+			p.address-heading {
+				font-size: rem-calc(14px);
+				color: #3b444f;
+			    margin-bottom: 0;
+				padding-bottom: 0.1em;
+
+			}
+		
+			.menu {
+				
+				a {
+					padding: 0;
+				}
+				
+				span.address {
+					font-size: rem-calc(12px);
+					color: #8d9197;
+				}	
+			
+			&.footer-social {
+				padding-top: 2em;
+				
+				@include breakpoint (medium) {
+					padding-top: 0;
+				}
+				
+				li {
+					a {
+						padding: 0;
+						width: 45px;
+						height: 45px;
+						border: 1px solid $black;
+						border-radius: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+				}
+			}
+			
+			}
+			
+		}
+		
+		.bottom {
+			padding-top: 1.65em;
+			padding-bottom: 4em;
+			
+			p {
+				font-size: rem-calc(12px);
+				color: #8d9197;
+			}
+			
+		}
+	
+	}
+	
 }
 	
 /*********************

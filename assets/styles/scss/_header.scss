@@ -1,0 +1,13 @@
+header.header {
+	position: relative;
+	
+	.top-bar,
+	.top-bar ul {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		width: 100%;
+		background: transparent;
+	}
+		
+}
