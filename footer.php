@@ -14,11 +14,11 @@
 					
 						<div class="inner-footer grid-x grid-padding-x">
 							
-							<div class="top cell small-12">
+							<div class="top small-12">
 								
 								<ul class="menu grid-x grid-padding-x content-wrap">
 									
-									<li class="cell shrink">
+									<li class="footer-logo-wrap cell shrink">
 										<a href="<?php echo home_url(); ?>">
 										<span class="show-for-sr"><?php bloginfo('name'); ?></span>
 										
@@ -92,10 +92,10 @@
 		    				</div>
 -->
 							
-							<div class="bottom small-12 medium-12 large-12 cell">
+							<div class="content-wrap bottom small-12 medium-12 large-12 cell">
 
 							   	<?php if ($subfooter = get_field('sub_footer_copy', 'option')):?>
-							    <p class="content-wrap"><?php echo $subfooter;?></p>
+							    <p><?php echo $subfooter;?></p>
 							    <?php endif;?>
 					    
 							</div>

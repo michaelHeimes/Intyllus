@@ -3,6 +3,10 @@
 Stylesheet: Global Stylesheet
 
 *************************************************/
+@font-face {
+  font-family: 'effra';
+  src: url('/wp-content/themes/Intyllus/assets/fonts/Effra_Std_Rg.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
 
 /*********************
 GLOBAL STYLES
@@ -424,6 +428,87 @@ COMMENT FORM STYLES
 }
 
 /*********************
+GRAVITY FORM STYLES
+*********************/
+body .gform_wrapper ul li.gfield {
+    margin-top: 28px;
+}
+
+.gform_wrapper .ginput_complex input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=image]):not([type=file]),
+.gform_wrapper .ginput_complex select,
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+	width: 100%;
+	box-shadow: 0 0 0;
+	border: 0;
+	background: transparent;
+	border-bottom: 1px solid $black;
+	
+	&::placeholder {
+		color: $black;
+	}
+	
+}
+
+.gform_wrapper .gform_footer input.button,
+.gform_wrapper .gform_footer input[type=submit] {
+	width: 182px !important;
+	height: 41px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.2em 1em;
+	background: $black;	
+	color: $white;
+	border: 1px solid $black;
+	border-radius: 50px;
+}
+
+.ginput_container.ginput_container_fileupload {
+	position: relative;
+	
+	&:after {
+		cursor: pointer;
+		content: 'Attach Resume';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 182px;
+		height: 41px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0.2em 1em;
+		background: transparent;	
+		color: $black;
+		border: 1px solid $black;
+		border-radius: 50px;
+	}
+	
+	input[type=file] {
+		cursor: pointer;
+		position: relative;
+		z-index: 1;
+	    opacity: 0;
+	}
+}
+
+li#field_1_5 {
+    width: auto;
+    display: inline-block;
+    max-width: 220px;
+}
+
+.gform_wrapper .gform_footer {
+	margin-top: 0 !important;
+	
+	@include breakpoint (medium) {
+		margin: -66px 0 0 220px !important;
+	}
+}
+
+
+
+/*********************
 SIDEBARS & ASIDES
 *********************/
 .sidebar {
@@ -467,13 +552,22 @@ FOOTER STYLES
 		
 			.menu {
 				
-				a {
-					padding: 0;
+				li {
+					
+				&.footer-logo-wrap img {
+					width: 100%;
+					max-width: 95px;
 				}
 				
-				span.address {
-					font-size: rem-calc(12px);
-					color: #8d9197;
+					a {
+						padding: 0;
+					}
+				
+					span.address {
+						font-size: rem-calc(12px);
+						color: #8d9197;
+					}
+				
 				}	
 			
 			&.footer-social {

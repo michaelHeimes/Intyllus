@@ -8,6 +8,16 @@ header.header {
 		top: 0;
 		width: 100%;
 		background: transparent;
+		
+		li {
+			&.logo {
+				img {
+					width: 100%;
+					max-width: 190px;
+				}
+			}
+		}
+		
 	}
 		
 }

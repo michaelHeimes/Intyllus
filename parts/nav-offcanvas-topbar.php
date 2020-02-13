@@ -9,15 +9,20 @@
 <div class="top-bar" id="top-bar-menu">
 	<div class="top-bar-left float-left">
 		<ul class="menu">
-			<li><a href="<?php echo home_url(); ?>">
+			<li class="logo"><a href="<?php echo home_url(); ?>">
 				<span class="show-for-sr"><?php bloginfo('name'); ?></span>
 				<?php if ( function_exists( 'the_custom_logo' ) ) {
-				 the_custom_logo();
-				}
-				else {
+					
+					the_custom_logo();?>
+					
+					<span class="show-for-sr"><?php  bloginfo('name');?></span>
+					
+				<?php } else {
+					
 					bloginfo('name');
-				}
-				;?>
+				
+				};?>
+				
 				</a></li>
 		</ul>
 	</div>

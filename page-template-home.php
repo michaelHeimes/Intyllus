@@ -27,15 +27,13 @@ get_header(); ?>
 					<?php endif; ?>
 				</div>
 				
-<!--
-				<div class="hero-text left small-12 medium-6">
+				<div class="hero-text left small-12 medium-6 show-for-sr">
 					<?php the_field('left_text');?>
 				</div>
 				
-				<div class="hero-text right small-12 medium-6">
+				<div class="hero-text right small-12 medium-6 show-for-sr">
 					<?php the_field('right_text');?>
 				</div>
--->
 			
 			</div>
 		</div>
@@ -91,26 +89,30 @@ get_header(); ?>
 				    	<?php while ( have_rows('service_cards') ) : the_row();?>	
 				    	
 				    	<div class="single-service-card cell small-12 medium-4">
+					    	
+					    	<div class="inner">
 				    	
-				    	<?php if( have_rows('single_service_card') ):?>
-				    		<?php while ( have_rows('single_service_card') ) : the_row();?>	
-				    		
-				    			<?php 
-								$image = get_sub_field('icon');
-								if( !empty( $image ) ): ?>
-								    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-								<?php endif; ?>
-								
-							   	<?php if ($cardlabel = get_sub_field('label')):?>
-							    <h4 class="text-center"><?php echo $cardlabel;?></h4>
-							    <?php endif;?>
-
-							   	<?php if ($cardcopy = get_sub_field('copy')):?>
-							    <p class="text-center"><?php echo $cardcopy;?></p>
-							    <?php endif;?>
-				    				    	
-				    		<?php endwhile;?>
-				    	<?php endif;?>
+					    	<?php if( have_rows('single_service_card') ):?>
+					    		<?php while ( have_rows('single_service_card') ) : the_row();?>	
+					    		
+					    			<?php 
+									$image = get_sub_field('icon');
+									if( !empty( $image ) ): ?>
+									    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+									<?php endif; ?>
+									
+								   	<?php if ($cardlabel = get_sub_field('label')):?>
+								    <h4 class="text-center"><?php echo $cardlabel;?></h4>
+								    <?php endif;?>
+	
+								   	<?php if ($cardcopy = get_sub_field('copy')):?>
+								    <p class="text-center"><?php echo $cardcopy;?></p>
+								    <?php endif;?>
+					    				    	
+					    		<?php endwhile;?>
+					    	<?php endif;?>
+				    	
+					    	</div>
 				    	
 				    	</div>
 				    
@@ -141,7 +143,7 @@ get_header(); ?>
 						</div>
 					<?php endif; ?>
 					
-					<div class="left cell small-12 medium-7 text-center lt-gray-bg">
+					<div class="left cell small-12 medium-7 text-center">
 										    
 					   	<?php if ($s3heading = get_field('s3_heading')):?>
 					    <h2 class="text-center"><?php echo $s3heading;?></h2>
@@ -149,7 +151,7 @@ get_header(); ?>
 					    <?php endif;?>
 					    
 					   	<?php if ($s3copy = get_field('s3_copy')):?>
-					    <p class="text-center"><?php echo $s3copy;?></p>
+					    <p class="text-center intro-text"><?php echo $s3copy;?></p>
 					    <?php endif;?>	
 	
 					    
@@ -187,8 +189,11 @@ get_header(); ?>
 				    <?php endif;?>
 				    
 				   	<?php if ($s4copy = get_field('s4_copy')):?>
-				    <div><?php echo $s4copy;?></div>
+				    <p><?php echo $s4copy;?></p>
 				    <?php endif;?>	
+				    
+				    <?php gravity_form( 1, false, false, false, '', true );?>
+
 				    
 				</div>
 				</div>

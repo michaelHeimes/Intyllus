@@ -83,7 +83,7 @@ $black: #000000;
 $white: #ffffff;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Effra','Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'effra','Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -133,7 +133,7 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: 500;
+$header-font-weight: 600;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: $red;
@@ -860,7 +860,7 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
-  small: 20px,
+  small: 30px,
   medium: 30px
 );
 $grid-padding-gutters: $grid-margin-gutters;
