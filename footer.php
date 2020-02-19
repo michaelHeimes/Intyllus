@@ -35,17 +35,29 @@
 										</a>
 									</li>
 									
-									<li class="cell shrink">
-
-										<p class="address-heading"><?php the_field('address_heading', 'option');?></p>
+									<li class="footer-contact cell shrink">
 									
 										<a href="<?php the_field('google_directions_url', 'option');?>" target="_blank">
 																						
 											<span class="address"><?php the_field('address', 'option');?></span>
 											
 										</a>	
+										
+										<a href="tel:<?php the_field('phone_number', 'option');?>" target="_blank">
+																						
+											<span class="phone_number"><?php the_field('phone_number', 'option');?></span>
+											
+										</a>	
+										
+										<a href="mailto:<?php the_field('email_address', 'option');?>" target="_blank">
+																						
+											<span class="aemail_address"><?php the_field('email_address', 'option');?></span>
+											
+										</a>	
+										
 									</li>
 									
+<!--
 									<li class="cell small-12 medium-shrink">
 									
 										<ul class="menu footer-social grid-x grid-padding-x">
@@ -76,6 +88,7 @@
 										</ul>
 									
 									</li>
+-->
 									
 								</ul>
 							

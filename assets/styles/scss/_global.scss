@@ -463,41 +463,6 @@ body .gform_wrapper ul li.gfield {
 	border-radius: 50px;
 }
 
-.ginput_container.ginput_container_fileupload {
-	position: relative;
-	
-	&:after {
-		cursor: pointer;
-		content: 'Attach Resume';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 182px;
-		height: 41px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 0.2em 1em;
-		background: transparent;	
-		color: $black;
-		border: 1px solid $black;
-		border-radius: 50px;
-	}
-	
-	input[type=file] {
-		cursor: pointer;
-		position: relative;
-		z-index: 1;
-	    opacity: 0;
-	}
-}
-
-li#field_1_5 {
-    width: auto;
-    display: inline-block;
-    max-width: 220px;
-}
-
 .gform_wrapper .gform_footer {
 	margin-top: 0 !important;
 	
@@ -563,10 +528,19 @@ FOOTER STYLES
 						padding: 0;
 					}
 				
-					span.address {
+				&.footer-contact {
+					span {
+						display: inline-block;
 						font-size: rem-calc(12px);
 						color: #8d9197;
+						margin-bottom: 2px;
+						
+					&:last-child {
+						margin-bottom: 0;
 					}
+						
+					}
+				}
 				
 				}	
 			
