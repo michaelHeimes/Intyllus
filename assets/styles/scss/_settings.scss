@@ -66,10 +66,10 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1100);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #1779ba,
+  primary: #ed2524,
   secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
@@ -78,12 +78,15 @@ $foundation-palette: (
 $light-gray: #f2f2f2;
 $medium-gray: #c2c2c2;
 $dark-gray: #8a8a8a;
-$red: #ed2524;
 $black: #000000;
 $white: #ffffff;
+$red: #ed2524;
+$teal: #70B3B7;
+$header-blue: #0D2132;
+$navy: #17255F;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'effra','Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: Georgia, serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -91,7 +94,7 @@ $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 0;
-$global-menu-padding: 0.7rem 1rem;
+$global-menu-padding: .7rem 0.85rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
 $global-flexbox: true;
@@ -109,12 +112,13 @@ $print-hrefs: true;
 $breakpoints: (
   small: 0,
   medium: 640px,
+  xmedium: 992px,
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium xmedium large);
 
 // 3. The Grid
 // -----------
@@ -132,11 +136,11 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
+$header-font-family: Georgia, serif;
 $header-font-weight: 600;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
-$header-color: $red;
+$header-color: $black;
 $header-lineheight: 1.23;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
@@ -160,7 +164,7 @@ $header-styles: (
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1.75;
+$paragraph-lineheight: 1.77777;
 $paragraph-margin-bottom: 1.75rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
@@ -281,15 +285,15 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // ----------
 
 $button-font-family: inherit;
-$button-padding: 0.85em 1em;
+$button-padding: .695em 2.505em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: $primary-color;
+$button-background: $black;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
-$button-radius: $global-radius;
-$button-hollow-border-width: 1px;
+$button-radius: 18px;
+$button-hollow-border-width: 0px;
 $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
@@ -476,7 +480,7 @@ $menu-nested-margin: $global-menu-nested-margin;
 $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
 $menu-item-color-active: $white;
-$menu-item-background-active: get-color(primary);
+$menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
 $menu-state-back-compat: true;
 $menu-centered-back-compat: true;

@@ -14,28 +14,37 @@ get_header(); ?>
 	?>				
 
 	<div class="hero">
-		<div class="hero-bg" style="background-image: url(<?php echo $imgArr[0]; ?> );"></div>
 		
-		<div class="grid-container">
-			<div class="grid-x grid-padding-x align-center align-middle">
-				
-				<div class="tagline-img-wrap cell small-12 text-center">
-					<?php 
-					$image = get_field('hero_tagline_image');
-					if( !empty( $image ) ): ?>
-					    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-					<?php endif; ?>
-				</div>
-				
-				<div class="hero-text left small-12 medium-6 show-for-sr">
-					<?php the_field('left_text');?>
-				</div>
-				
-				<div class="hero-text right small-12 medium-6 show-for-sr">
-					<?php the_field('right_text');?>
-				</div>
+		<div class="hero-slider">
 			
+			<div class="single-slide">
+			
+				<div class="hero-bg" style="background-image: url(<?php echo $imgArr[0]; ?> );"></div>
+				
+				<div class="grid-container">
+					<div class="grid-x grid-padding-x align-center align-middle">
+						
+						<div class="tagline-img-wrap cell small-12 text-center">
+							<?php 
+							$image = get_field('hero_tagline_image');
+							if( !empty( $image ) ): ?>
+							    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+							<?php endif; ?>
+						</div>
+						
+						<div class="hero-text left small-12 medium-6 show-for-sr">
+							<?php the_field('left_text');?>
+						</div>
+						
+						<div class="hero-text right small-12 medium-6 show-for-sr">
+							<?php the_field('right_text');?>
+						</div>
+					
+					</div>
+				</div>
+				
 			</div>
+			
 		</div>
 		
 	</div>

@@ -5,9 +5,13 @@ Stylesheet: Global Stylesheet
 *************************************************/
 @font-face {
   font-family: 'effra';
-  src: url('/wp-content/themes/Intyllus/assets/fonts/Effra_Std_Rg.ttf')  format('truetype'); /* Safari, Android, iOS */
+  src: url('/wp-content/themes/Intyllus/assets/fonts/Effra_Std_Rg.ttf') format('truetype');
 }
-
+@font-face {
+  font-family: 'kristopher';
+  src: url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.otf') format('opentype'),
+       url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.ttf') format('truetype')
+}
 /*********************
 GLOBAL STYLES
 *********************/
@@ -34,7 +38,142 @@ GLOBAL STYLES
 h1,
 h2,
 h3 {
+	text-transform: none;
+	line-height: 1.217;
+}
+
+h1.h1,
+h2.h1 {
+	font-size: rem-calc(46);
+	color: $header-blue;
+}
+
+h3 {
+	font-size: rem-calc(23);
+}
+
+p,
+ul,
+ol {
+	font-size: rem-calc(18);
+	color: $black;
+	line-height: 1.77777;
+}
+
+ul {
+	list-style: none;
+	padding: 0.55em 0;
+	
+	li {
+		position: relative;
+		padding: 0.3em 0 0.3em 1em;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			left: -0.4em;
+		    top: 0.8em;
+		    width: 4px;
+		    height: 4px;
+		    border-radius: 100%;
+			background-color: $black;
+		}
+		
+	}
+	
+}
+
+/*********************
+MODULES
+*********************/
+.module {
+    padding-top: 6.05em;
+    padding-bottom: 6.05em;
+    
+&.no-tp {
+	padding-top: 0;
+}
+
+&.no-bp {
+	padding-bottom: 0;
+}
+    
+&.background-white {
+	background-color: $white;
+}
+
+&.background-gray {
+	background-color: $light-gray;
+}
+    
+}
+
+.inner {
+	
+&.background-white {
+	background-color: $white;
+}
+
+&.background-gray {
+	background-color: $light-gray;
+}
+
+}
+
+
+/*********************
+BUTTONS AND LINKS
+*********************/
+.alm-btn-wrap .alm-load-more-btn,
+.button {
+	font-family: $font-sans;
+	font-weight: bold;
+	font-size: rem-calc(16);
+	text-align: center;
+	
+&.white {
+	background-color: $white;
+	color: $black;
+}
+	
+}
+
+a.chev-link {
+	font-family: Helvetica;
+	font-size: rem-calc(16);
+	font-weight: bold;
 	text-transform: uppercase;
+	color: $navy;
+	display: inline-flex;
+	align-items: center;
+	
+	img {
+		margin-left: 6px;
+	}
+	
+}
+
+.alm-btn-wrap {
+	text-align: center;
+	padding-top: 2em;
+
+	.alm-load-more-btn {
+		background-color: $black;
+		color: $white;
+		display: inline-block;
+	    vertical-align: middle;
+	    margin: 0 0 1rem;
+	    padding: .695em 2.505em;
+	    border: 1px solid transparent;
+	    border-radius: 18px;
+	    transition: background-color .25s ease-out,color .25s ease-out;
+	    font-size: .9rem;
+	    -webkit-appearance: none;
+	    line-height: 1;
+	    text-align: center;
+	    cursor: pointer;
+	}
+	
 }
 
 /*********************
@@ -487,103 +626,7 @@ SIDEBARS & ASIDES
 		margin: 0;
 	}
 }
-/*********************
-FOOTER STYLES
-*********************/
-.footer {
-	clear: both;
-	padding-top: 1em;
-	
-	.inner-footer {
-		
-		.content-wrap {
-			margin-left: auto;
-			margin-right: auto;
-		}
-		
-		.top {
-			border-top: 1px solid $medium-gray;
-			border-bottom: 1px solid $medium-gray;
-			padding-top: 2.55em;
-			padding-bottom: 5.9em;
-			
-			p.address-heading {
-				font-size: rem-calc(14px);
-				color: #3b444f;
-			    margin-bottom: 0;
-				padding-bottom: 0.1em;
 
-			}
-		
-			.menu {
-				
-				li {
-					
-				&.footer-logo-wrap img {
-					width: 100%;
-					max-width: 95px;
-				}
-				
-					a {
-						padding: 0;
-					}
-				
-				&.footer-contact {
-					span {
-						display: inline-block;
-						font-size: rem-calc(12px);
-						color: #8d9197;
-						margin-bottom: 2px;
-						
-					&:last-child {
-						margin-bottom: 0;
-					}
-						
-					}
-				}
-				
-				}	
-			
-			&.footer-social {
-				padding-top: 2em;
-				
-				@include breakpoint (medium) {
-					padding-top: 0;
-				}
-				
-				li {
-					a {
-						padding: 0;
-						width: 45px;
-						height: 45px;
-						border: 1px solid $black;
-						border-radius: 100%;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-					}
-				}
-			}
-			
-			}
-			
-		}
-		
-		.bottom {
-			padding-top: 1.65em;
-			padding-bottom: 4em;
-			
-			p {
-				font-size: rem-calc(12px);
-				color: #8d9197;
-			}
-			
-		}
-	
-	}
-	
-}
-	
 /*********************
 VISUAL EDITOR STYLES
 *********************/

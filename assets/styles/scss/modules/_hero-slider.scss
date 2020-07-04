@@ -1,0 +1,90 @@
+.hero {
+	
+	.hero-slider {
+		height: 614px;
+		overflow: hidden;
+		
+		.single-slide {
+			position: relative;
+			
+			.hero-bg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-size: cover;
+			}
+			
+			.inner {			
+				height: 614px;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				padding-bottom: 5em;
+				
+				.text-wrap {
+					position: relative;
+					
+					.bg {
+						top: 3.5em;
+						right: -2.8em;
+						left: -2000px;
+						left: -200vw;
+						bottom: 0;
+						position: absolute;
+						background-color: $black;
+						opacity: 0.7;
+					}
+					
+					h2,
+					p,
+					a {
+						position: relative;
+					}
+				
+					h2 {
+						color: $white;
+						font-size: rem-calc(84);
+						text-transform: none;
+						padding-bottom: 0.11em;
+						font-family: $font-serif-alt;
+						font-weight: 500;
+					}
+					
+					p {
+						color: $white;
+						font-family: $font-sans;
+						font-size: rem-calc(22);
+						line-height: 1.45;
+						margin-bottom: 0;
+						padding-bottom: .58em;
+					}
+					
+					.link-wrap {
+						padding-bottom: 2.55em;
+						
+						a {
+							font-family: $font-sans;
+							text-transform: uppercase;
+							font-weight: bold;
+							font-size: rem-calc(16);
+							color: $teal;
+							letter-spacing: 0;
+						}
+					}
+					
+
+					
+				}
+				
+			}
+		}
+		
+	&.slick-initialized {
+		height: auto;
+	}
+		
+	}
+	
+}

@@ -7,6 +7,47 @@
  * For more info: https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */			
  ?>
+ 
+ 	<?php if(get_field('show_wwu', 'option') == 'true'):
+	 	
+		$imgID = get_field('wwu_background_image', 'option');
+		$imgSize = "full";
+		$imgArr = wp_get_attachment_image_src( $imgID, $imgSize );
+		
+	?>	
+	
+ 	<div class="work-with-us" style="background-image: url(<?php echo $imgArr[0]; ?> );">
+	 	
+		<div class="grid-container">		
+			<div class="grid-x grid-padding-x align-center">
+							
+				<div class="cell small-12 xmedium-7 text-center">
+					
+					<?php if($heading = get_field('wwu_heading', 'option')):?>
+					<h2><?php echo $heading;?></h2>
+					<div class="heading-underline"></div>
+					<?php endif;?>
+
+					<?php if($copy = get_field('wwu_copy', 'option')):?>
+					<p><?php echo $copy;?></p>
+					<?php endif;?>
+					
+					<?php 
+					$link = get_field('wwu_link', 'option');
+					if( $link ): 
+					    $link_url = $link['url'];
+					    $link_title = $link['title'];
+					    $link_target = $link['target'] ? $link['target'] : '_self';
+					    ?>
+					    <a class="button white" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+					<?php endif; ?>
+					
+				</div>
+				
+			</div>
+		</div>
+ 	</div>
+ 	<?php endif;?>
 					
 				<footer class="footer lt-gray-bg" role="contentinfo">
 					
@@ -57,7 +98,6 @@
 										
 									</li>
 									
-<!--
 									<li class="cell small-12 medium-shrink">
 									
 										<ul class="menu footer-social grid-x grid-padding-x">
@@ -88,7 +128,10 @@
 										</ul>
 									
 									</li>
--->
+									
+									<li class="cell shrink">
+										<img src="/wp-content/themes/Intyllus/assets/images/u.s.-flag.svg"/>
+									</li>
 									
 								</ul>
 							

@@ -1,0 +1,19 @@
+.quote {
+	
+	img {
+		margin-bottom: 1.5em;
+	}
+	
+	p {
+		font-size: rem-calc(32);
+		line-height: 1.6875;
+		font-weight: bold;
+	}
+	
+	.author {
+		font-size: rem-calc(24);
+		color: $red;
+		text-transform: uppercase;
+	}
+	
+}

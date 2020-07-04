@@ -1,21 +1,61 @@
 header.header {
 	position: relative;
 	
-	.top-bar,
-	.top-bar ul {
-		position: absolute;
+	#top-bar-menu,
+	#top-bar-menu ul {
 		z-index: 1;
 		top: 0;
 		width: 100%;
-		background: transparent;
+		background: $white;
+	}
 		
-		li {
-			&.logo {
-				img {
-					width: 100%;
-					max-width: 190px;
+	#top-bar-menu {
+		
+		.grid-x {
+			min-height: 121px;
+		
+			ul {
+				display: flex;
+				justify-content: flex-end;
+				
+				li {
+					position: relative;
+				&.logo {
+					img {
+						width: 100%;
+						max-width: 190px;
+					}
 				}
+				
+				a {
+					font-family: $font-sans;
+					font-size: rem-calc(16);
+					color: $black;
+					letter-spacing: 0;
+					font-weight: bold;
+					text-transform: uppercase;
+				}
+				
+				&.current-menu-item:after {
+					content: '';
+					position: absolute;
+					width: 58px;
+					height: 6px;
+					background-color: $red;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					margin: auto;
+				}
+					
+				}
+				
+			}	
+			
+			.top-bar-right {
+				padding-bottom: 1.35em;
 			}
+			
 		}
 		
 	}
