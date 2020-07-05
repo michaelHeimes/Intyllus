@@ -44,8 +44,13 @@ h3 {
 
 h1.h1,
 h2.h1 {
-	font-size: rem-calc(46);
+	font-size: rem-calc(36);
 	color: $header-blue;
+	
+	@include breakpoint(medium) {
+		font-size: rem-calc(46);
+	}
+	
 }
 
 h3 {
@@ -60,9 +65,9 @@ ol {
 	line-height: 1.77777;
 }
 
-ul {
+ul:not(.menu) {
 	list-style: none;
-	padding: 0.55em 0;
+	padding: 0.55em 0 0;
 	
 	li {
 		position: relative;
@@ -104,6 +109,10 @@ MODULES
 
 &.background-gray {
 	background-color: $light-gray;
+}
+ 
+&:last-child {
+	padding-bottom: 9em;
 }
     
 }
@@ -175,6 +184,17 @@ a.chev-link {
 	}
 	
 }
+
+/*********************
+PAGES
+*********************/
+/*
+.page {
+	.content {
+		padding-bottom: 3em;
+	}
+}
+*/
 
 /*********************
 POSTS & CONTENT STYLES
@@ -569,48 +589,79 @@ COMMENT FORM STYLES
 /*********************
 GRAVITY FORM STYLES
 *********************/
-body .gform_wrapper ul li.gfield {
-    margin-top: 28px;
-}
-
-.gform_wrapper .ginput_complex input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=image]):not([type=file]),
-.gform_wrapper .ginput_complex select,
-.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
-	width: 100%;
-	box-shadow: 0 0 0;
-	border: 0;
-	background: transparent;
-	border-bottom: 1px solid $black;
-	
-	&::placeholder {
-		color: $black;
+.gform_wrapper {
+	form {
+		max-width: 300px !important;
+		margin: 0 !important;
+		
+		.gform_body {
+			font-family: $font-sans;
+			ul {
+				li {
+					margin-top: 0;
+					padding-left: 0;
+					
+					input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+						width: 100%;
+						height: 36px;
+						padding: 0 0.75em;
+						margin-bottom: 0;
+						background: $white;
+						box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.50);
+						font-size: rem-calc(14);
+						
+					&::placeholder {
+						font-size: rem-calc(14);
+						color: #BBBBBB;
+					}
+						
+					}
+					
+					textarea,
+					select {
+						font-size: rem-calc(14);
+						border: 1px solid #979797;
+						box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20), inset 0 2px 0 0 #FFFFFF;
+						border-radius: 3px;
+					}
+					
+					.ginput_container_select {
+						select {
+							height: 36px;
+							padding: 0 0.75em;
+							background-image: url(../images/select-triangles.svg);
+							background-size: 10px;
+							background-position: 100% 50%;
+							background-repeat: no-repeat;
+						}
+					}
+					
+					&.resume {
+						margin-top: 0;
+						
+						label {
+							
+						}
+						
+						.ginput_container_fileupload {
+							
+							input[type=file] {
+								width: 100% !important;
+							}	
+						}
+						
+						.gfield_description {
+							padding-top: 0;
+						}
+						
+					}
+					
+				}
+			}
+		
+		}
 	}
-	
 }
-
-.gform_wrapper .gform_footer input.button,
-.gform_wrapper .gform_footer input[type=submit] {
-	width: 182px !important;
-	height: 41px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0.2em 1em;
-	background: $black;	
-	color: $white;
-	border: 1px solid $black;
-	border-radius: 50px;
-}
-
-.gform_wrapper .gform_footer {
-	margin-top: 0 !important;
-	
-	@include breakpoint (medium) {
-		margin: -66px 0 0 220px !important;
-	}
-}
-
-
 
 /*********************
 SIDEBARS & ASIDES

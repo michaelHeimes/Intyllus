@@ -27,7 +27,7 @@
 					position: relative;
 					
 					.bg {
-						top: 3.5em;
+						top: 2em;
 						right: -2.8em;
 						left: -2000px;
 						left: -200vw;
@@ -35,6 +35,11 @@
 						position: absolute;
 						background-color: $black;
 						opacity: 0.7;
+						
+						@include breakpoint(medium) {
+							top: 3.5em;
+						}
+						
 					}
 					
 					h2,
@@ -45,11 +50,16 @@
 				
 					h2 {
 						color: $white;
-						font-size: rem-calc(84);
+						font-size: rem-calc(50);
 						text-transform: none;
 						padding-bottom: 0.11em;
 						font-family: $font-serif-alt;
 						font-weight: 500;
+						
+						@include breakpoint(medium) {
+							font-size: rem-calc(84);
+						}
+						
 					}
 					
 					p {

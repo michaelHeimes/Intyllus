@@ -78,6 +78,7 @@
 			
 			&.footer-social {
 				padding-top: 2em;
+				margin-bottom: 2em;
 				
 				@include breakpoint (medium) {
 					padding-top: 0;

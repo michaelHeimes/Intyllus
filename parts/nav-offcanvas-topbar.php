@@ -8,7 +8,7 @@
 
 <div id="top-bar-menu">
 	<div class="grid-container">
-		<div class="grid-x grid-padding-x align-bottom">
+		<div class="grid-x grid-padding-x">
 			
 			<div class="top-bar-left cell shrink">
 				<ul class="menu">
@@ -32,14 +32,14 @@
 				</ul>
 			</div>
 		
-			<div class="cell auto top-bar-right show-for-medium">
+			<div class="cell auto top-bar-right show-for-xmedium">
 				<?php joints_top_nav(); ?>	
 			</div>
 			
-			<div class="top-bar-right show-for-small-only">
+			<div class="cell shrink top-bar-right hide-for-xmedium">
 				<ul class="menu">
 					<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-					<li><a data-toggle="off-canvas"><?php _e( 'Menu', 'jointswp' ); ?></a></li>
+					<li><a class="mobile-toggle" data-toggle="off-canvas"><span></span><span></span><span></span></a></li>
 				</ul>
 			</div>
 			

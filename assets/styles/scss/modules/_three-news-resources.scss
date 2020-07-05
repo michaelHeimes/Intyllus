@@ -12,8 +12,13 @@
 		border-top: 1px solid $medium-gray;
 	}
 	
+	h2.h1 {
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+	
 	.view-all-wrap {
 		padding-top: 1.9em;
 	}
-	
+		
 }

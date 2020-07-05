@@ -8,7 +8,7 @@
  */			
  ?>
  
- 	<?php if(get_field('show_wwu', 'option') == 'true'):
+ 	<?php if(get_field('show_wwu', 'option') == 'true' && get_field('wwu_cta_hide') !='true'):
 	 	
 		$imgID = get_field('wwu_background_image', 'option');
 		$imgSize = "full";

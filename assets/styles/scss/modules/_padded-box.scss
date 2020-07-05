@@ -1,6 +1,10 @@
 .padded-box {
 	.inner {
-		padding: 4.4em 6.2em;
+		padding: 2.4em 2.4em;
+		
+		@include breakpoint(medium) {
+			padding: 4.4em 6.2em;
+		}
 
 	h2 {
 		font-size: rem-calc(23);

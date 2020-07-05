@@ -12,10 +12,11 @@
 	
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x align-center">
-			<div class="accordion cell small-12 xmedium-9" data-accordion>
+			<div class="accordion cell small-12" data-accordion data-allow-all-closed="true">
 				
 				<?php
 				$args = array( 
+				'post_status' => 'publish',
 				'post_type' => 'career',
 				'posts_per_page' => -1 ,
 				'order' => 'DESC'
@@ -27,18 +28,18 @@
 				while ( $loop->have_posts() ) : $loop->the_post();?>
 				
 
-					<div class="accordion-item" data-accordion-item>
+					<div class="accordion-item grid-x grix-padding-x align-center" data-accordion-item>
 									  
-						<a href="#" class="accordion-title"><?php the_title(); ?> <img src="/wp-content/themes/Intyllus/assets/images/down-arrow.svg"/></a>
+						<a class="accordion-title cell small-12 xmedium-9" href="#"><?php the_title(); ?> <img src="/wp-content/themes/Intyllus/assets/images/down-arrow.svg"/></a>
 							
-						<div class="accordion-content" data-tab-content>
+						<div class="accordion-content cell small-12 xmedium-9" data-tab-content>
 							
 							<div class="copy-wrap">
-								<?php the_sub_field('copy');?>
+								<?php the_field('copy');?>
 							</div>
 							
 							<div class="btn-wrap">
-								<a class="button" href="<?php the_sub_field('application_link');?>">Apply Now</a>
+								<a class="button" href="/apply">Apply Now</a>
 							</div>
 							
 						</div>

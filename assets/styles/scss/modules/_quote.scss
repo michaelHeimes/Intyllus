@@ -5,9 +5,14 @@
 	}
 	
 	p {
-		font-size: rem-calc(32);
+		font-size: rem-calc(22);
 		line-height: 1.6875;
 		font-weight: bold;
+		
+		@include breakpoint(medium) {
+			font-size: rem-calc(32);
+		}
+		
 	}
 	
 	.author {

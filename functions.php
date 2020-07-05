@@ -28,6 +28,9 @@ require_once(get_template_directory().'/functions/page-navi.php');
 // Adds support for multiple languages
 require_once(get_template_directory().'/functions/translation/translation.php'); 
 
+// Populates Career Post Type in Gravity Form Apply Form
+require_once(get_template_directory().'/functions/career-dropdown.php'); 
+
 // Adds site styles to the WordPress editor
 // require_once(get_template_directory().'/functions/editor-styles.php'); 
 
@@ -44,4 +47,4 @@ require_once(get_template_directory().'/functions/translation/translation.php');
 // require_once(get_template_directory().'/functions/login.php'); 
 
 // Customize the WordPress admin
-// require_once(get_template_directory().'/functions/admin.php'); 
+// require_once(get_template_directory().'/functions/admin.php');

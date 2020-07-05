@@ -3,6 +3,7 @@ article.post-card {
 	display: flex;
 	
 	.inner {
+		width: 100%;
 		background-color: $light-gray;
 		padding-bottom: 1.2em;
 		display: flex;
