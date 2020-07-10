@@ -21,6 +21,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta class="foundation-mq">
 		
+		<link rel="stylesheet" href="https://use.typekit.net/muk4ccn.css">
+		
 		<!-- If Site Icon isn't set in customizer -->
 		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
 			<!-- Icons & Favicons -->
@@ -35,6 +37,19 @@
 	</head>
 			
 	<body <?php body_class(); ?>>
+		
+				<div data-sticky-container> 
+
+				
+				<header class="header" role="banner" data-sticky data-margin-top="0" data-sticky-on="small">
+							
+					 <!-- This navs will be applied to the topbar, above all content 
+						  To see additional nav styles, visit the /parts directory -->
+					 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
+	 	
+				</header> <!-- end .header -->
+				
+				</div>
 
 		<div class="off-canvas-wrapper">
 			
@@ -43,10 +58,3 @@
 			
 			<div class="off-canvas-content" data-off-canvas-content>
 				
-				<header class="header" role="banner">
-							
-					 <!-- This navs will be applied to the topbar, above all content 
-						  To see additional nav styles, visit the /parts directory -->
-					 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
-	 	
-				</header> <!-- end .header -->

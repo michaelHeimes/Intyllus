@@ -103,7 +103,7 @@
 										<ul class="menu footer-social grid-x grid-padding-x">
 									
 											<li class="cell shrink">
-												<a href="<?php the_field('twitter_url', 'option');?>">
+												<a href="<?php the_field('twitter_url', 'option');?>" target="_blank">
 													
 													<img src="/wp-content/themes/Intyllus/assets/images/twitter.svg"/>
 													
@@ -111,7 +111,7 @@
 											</li>
 
 											<li class="cell shrink">
-												<a href="<?php the_field('instagram_url', 'option');?>">
+												<a href="<?php the_field('instagram_url', 'option');?>" target="_blank">
 													
 													<img src="/wp-content/themes/Intyllus/assets/images/instagram.svg"/>
 													
@@ -119,7 +119,7 @@
 											</li>
 											
 											<li class="cell shrink">
-												<a href="<?php the_field('linkedin_url', 'option');?>">
+												<a href="<?php the_field('linkedin_url', 'option');?>" target="_blank"">
 													
 													<img src="/wp-content/themes/Intyllus/assets/images/linkedin-in.svg"/>
 													

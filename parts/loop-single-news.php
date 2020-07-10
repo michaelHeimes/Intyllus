@@ -39,7 +39,7 @@
 			<div class="cell small-12 xmedium-9">
 						
 				<header class="article-header">	
-					<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+					<h1 class="h1 entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 			    </header> <!-- end article header -->
     
 			</div>

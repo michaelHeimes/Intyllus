@@ -13,7 +13,7 @@
 		<div class="grid-x grid-padding-x align-center">
 			<div class="cell small-12 xmedium-11 text-center">
 				
-				<img src="/wp-content/themes/Intyllus/assets/images/quote-marks.svg"/>
+				<div class="quote-marks"><span>“</span> <span>”</span></div>
 				
 				<?php if($quote_text = get_sub_field('quote_text')):?>				
 				<p class="text-center"><?php echo $quote_text;?></p>

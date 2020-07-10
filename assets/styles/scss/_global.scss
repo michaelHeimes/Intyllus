@@ -88,6 +88,10 @@ ul:not(.menu) {
 	
 }
 
+.sticky-container {
+	z-index: 1;
+}
+
 /*********************
 MODULES
 *********************/
@@ -115,6 +119,10 @@ MODULES
 	padding-bottom: 9em;
 }
     
+&.no-bp:last-child {
+	padding-bottom: 6.05em;
+}
+
 }
 
 .inner {

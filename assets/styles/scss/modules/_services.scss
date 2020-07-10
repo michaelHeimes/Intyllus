@@ -17,6 +17,10 @@
 	.service-cards-wrap {
 		.single-service-card {
 			margin-bottom: 2em;
+			
+			@include breakpoint(medium) {
+				margin-bottom: 0;
+			}
 						
 			.inner {
 				display: flex;
@@ -47,6 +51,12 @@
 						padding-bottom: 1.55em;
 					}
 				
+				}
+				
+				.bottom {
+					a.button {
+						margin-bottom: 0;
+					}
 				}
 				
 			}

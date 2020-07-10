@@ -1,5 +1,6 @@
 header.header {
 	position: relative;
+	transition: transform .5s ease;
 	
 	#top-bar-menu,
 	#top-bar-menu ul {
@@ -19,10 +20,26 @@ header.header {
 				align-items: flex-end;
 				min-height: 121px;
 			}
-		
-			ul {
+			
+			ul#main-nav {
 				display: flex;
 				justify-content: flex-end;
+				
+				ul.submenu {
+					padding-top: 0.85em;
+					padding-bottom: 0.85em;
+					top: 40px;
+					
+					li.current-menu-item a:before {
+						left: .85rem;
+						right: auto;
+					}
+					
+				}
+				
+			}
+		
+			ul {
 				
 				li {
 					position: relative;
@@ -47,7 +64,7 @@ header.header {
 					text-transform: uppercase;
 				}
 				
-				&.current-menu-item:after {
+				&.current-menu-item > a:before {
 					content: '';
 					position: absolute;
 					width: 58px;
@@ -57,6 +74,10 @@ header.header {
 					left: 0;
 					right: 0;
 					margin: auto;
+				}
+				
+				&.menu-item-has-children.current-menu-item a:before {
+					right: 0.75rem;
 				}
 					
 				}
@@ -116,9 +137,8 @@ div#off-canvas {
 	ul {
 		li {
 			position: relative;
-			margin-bottom: 0.8em;
 			
-		&.current-menu-item:after {
+		&.current-menu-item > a:before {
 			content: '';
 			position: absolute;
 			width: 58px;
@@ -130,7 +150,7 @@ div#off-canvas {
 		}
 			
 			a {
-				
+				margin-top: 0.8em;				
 				font-family: $font-sans;
 				font-size: rem-calc(16);
 				color: $black;

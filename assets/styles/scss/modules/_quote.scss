@@ -4,6 +4,14 @@
 		margin-bottom: 1.5em;
 	}
 	
+	.quote-marks {
+		font-family: $font-serif-alt;
+		font-size: rem-calc(96);
+		line-height: 0;
+		margin-bottom: 0.12em;
+		color: $red;
+	}
+	
 	p {
 		font-size: rem-calc(22);
 		line-height: 1.6875;
