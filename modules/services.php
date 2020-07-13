@@ -78,16 +78,8 @@
 									    $link_title = $link['title'];
 									    $link_target = $link['target'] ? $link['target'] : '_self';
 									    ?>
-									    <div class="btn-wrap text-center">
-										    <?php if( $layout == 'with-copy'):?>
-										    
-									    		<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-									    		
-									    	<?php else:?>
-									    	
-									    		<a class="chev-link" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?><img src="/wp-content/themes/Intyllus/assets/images/chevron-navy.svg"/></a>
-									    		
-									    	<?php endif;?>
+									    <div class="btn-wrap text-center">										    
+								    		<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>									    		
 									    </div>
 									<?php endif; ?>
 									
