@@ -27,6 +27,36 @@
 				
 		}
 		
+		ul.slick-dots {
+		    position: absolute;
+		    left: 0;
+		    right: 0;
+			bottom: 0;		    
+		    width: 100%;
+		    font-size: 0;
+		    display: flex !important;
+		    justify-content: center;
+		    
+		    li {
+			    transition: transform 0.5s ease;
+			    
+				button {
+					position: relative;
+					width: 14px;
+					height: 14px;
+					background: #fff;
+					border-radius: 100%;
+					margin: 0 7px;
+				}
+				
+			&.slick-active {
+				transform: scale(1.35);	
+			}
+				
+			}
+		    
+		}
+		
 		.single-slide {
 			position: relative;
 			

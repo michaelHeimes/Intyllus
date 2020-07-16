@@ -90,7 +90,7 @@
 											
 										</a>	
 										
-										<a href="mailto:<?php the_field('email_address', 'option');?>" target="_blank">
+										<a class="email" href="mailto:<?php the_field('email_address', 'option');?>" target="_blank">
 																						
 											<span class="aemail_address"><?php the_field('email_address', 'option');?></span>
 											
@@ -119,7 +119,7 @@
 											</li>
 											
 											<li class="cell shrink">
-												<a href="<?php the_field('linkedin_url', 'option');?>" target="_blank"">
+												<a href="<?php the_field('linkedin_url', 'option');?>" target="_blank">
 													
 													<img src="/wp-content/themes/Intyllus/assets/images/linkedin-in.svg"/>
 													

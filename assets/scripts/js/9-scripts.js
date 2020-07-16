@@ -2,8 +2,8 @@
 		
 // 	Home Hero Slider
 	$('.hero-slider').slick({
-		dots: false,
-		arrows: true,
+		dots: true,
+		arrows: false,
 		autoplay: true,
 		autoplaySpeed: 3000,
 		infinite: true,

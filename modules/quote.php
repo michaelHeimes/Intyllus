@@ -12,11 +12,9 @@
 	<div class="grid-container">
 		<div class="grid-x grid-padding-x align-center">
 			<div class="cell small-12 xmedium-11 text-center">
-				
-				<div class="quote-marks"><span>“</span> <span>”</span></div>
-				
+								
 				<?php if($quote_text = get_sub_field('quote_text')):?>				
-				<p class="text-center"><?php echo $quote_text;?></p>
+				<p class="text-center"><span class="quote-mark">“</span><?php echo $quote_text;?><span class="quote-mark">”</span></p>
 				<?php endif;?>
 
 				<?php if($quote_author = get_sub_field('quote_author')):?>				

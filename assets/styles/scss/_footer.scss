@@ -1,6 +1,7 @@
 .work-with-us {
 	padding-top: 5.2em;
 	padding-bottom: 4.6em;
+	background-size: cover;
 	    
 	h2,
 	p {
@@ -67,11 +68,21 @@
 						color: #8d9197;
 						margin-bottom: 2px;
 						
+					&.address {
+						line-height: 1.5;
+						margin-top: -.09em;
+					}
+						
 					&:last-child {
 						margin-bottom: 0;
 					}
 						
 					}
+					
+					a.email {
+						font-weight: bold;
+					}
+					
 				}
 				
 				}	

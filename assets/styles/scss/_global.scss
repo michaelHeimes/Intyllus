@@ -65,7 +65,7 @@ ol {
 	line-height: 1.77777;
 }
 
-ul:not(.menu) {
+ul:not(.menu):not(.slick-dots) {
 	list-style: none;
 	padding: 0.55em 0 0;
 	
