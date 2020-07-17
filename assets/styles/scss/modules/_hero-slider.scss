@@ -70,7 +70,7 @@
 				background-position: 72% 50%;
 				
 				@include breakpoint(medium) {
-					background-position: center center;
+					background-position: 50% 0%;
 				}
 				
 			}
@@ -85,7 +85,14 @@
 				
 				@include breakpoint(medium) {
 					min-height: 0;
+					height: 500px;
+					max-height: none;
+				}
+
+				@include breakpoint(large) {
+					min-height: 0;
 					height: 614px;
+					height: 47.969vw;
 					max-height: none;
 				}
 				
