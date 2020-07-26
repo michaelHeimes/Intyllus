@@ -5,13 +5,22 @@ Stylesheet: Global Stylesheet
 *************************************************/
 @font-face {
   font-family: 'effra';
-  src: url('/wp-content/themes/Intyllus/assets/fonts/Effra_Std_Rg.ttf') format('truetype');
+    src: url('/wp-content/themes/Intyllus/assets/fonts/Effra-Regular.eot');
+    src: url('/wp-content/themes/Intyllus/assets/fonts/Effra-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/Intyllus/assets/fonts/Effra-Regular.woff2') format('woff2'),
+        url('/wp-content/themes/Intyllus/assets/fonts/Effra-Regular.woff') format('woff'),
+        url('/wp-content/themes/Intyllus/assets/fonts/Effra_Std_Rg.ttf') format('truetype');
 }
 @font-face {
   font-family: 'kristopher';
-  src: url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.otf') format('opentype'),
-       url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.ttf') format('truetype')
+	src: url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.eot');
+	src: url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.eot?#iefix') format('embedded-opentype'),
+	    url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.woff2') format('woff2'),
+	    url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.woff') format('woff'),
+	    url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.otf') format('opentype'),
+        url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.ttf') format('truetype');
 }
+
 /*********************
 GLOBAL STYLES
 *********************/
