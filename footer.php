@@ -153,6 +153,8 @@
 							   	<?php if ($subfooter = get_field('sub_footer_copy', 'option')):?>
 							    <p><?php echo $subfooter;?></p>
 							    <?php endif;?>
+							    
+							    <p>&copy; Copyright <?php echo date('Y'); ?> - Intyllus Advisors</p>
 					    
 							</div>
 						
